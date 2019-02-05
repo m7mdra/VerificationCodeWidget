@@ -34,18 +34,15 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         child: Icon(Icons.delete_sweep),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          VerificationCodeWidget(
-            4,
-            key: _key,
-            onCodeChange: (code) {},
-            onComplete: (bool) {
-              print("is completed? $bool");
-            },
-          ),
-        ],
+      body: Center(
+        child: VerificationCodeWidget(
+          4,
+          key: _key,
+          onCodeChange: (code) {},
+          onComplete: (bool) {
+            print("is completed? $bool");
+          },
+        ),
       ),
     );
   }
